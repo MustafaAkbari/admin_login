@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<div class="container">
+  {% with messages = get_flashed_messages(with_categories=True) %}
+  {% if messages %}
+    <div class="alert-container">
+      {% for category, message in messages %}
+      {% if category == "success" %}
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% elif category == "warning" %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <strong>{{ message }}</strong>
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+</div>
+<div class="container">
+<h1>Fürstenfeldbruck Immigrant Camp</h1>
+<h2>Welcome To Money Payout Application</h2>
+<p>Admin of the application can register a person by his/her MID number if he/she received his/her monthly salary.</p>
+</div>
+{% endblock %}
+</body>
+</html>

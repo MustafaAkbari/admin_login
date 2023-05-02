@@ -1,0 +1,18 @@
+Name: mustafa
+Last Name: akbari
+MID Number: 23402256
+Payment: Yes
+
+
+Name: murteza
+Last Name: musavi
+MID Number: 23404567
+Payment: Yes
+
+
+Name: safiullah
+Last Name: azimi
+MID Number: 23409890
+Payment: Yes
+
+
